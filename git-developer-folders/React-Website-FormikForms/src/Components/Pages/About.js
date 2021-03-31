@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from '../Common/Header'
-// import image  from '../components/assets/img/about-backgroundimage.jpeg'
 import image from '../assets/img/about-backgroundimage.jpeg';
 
 
@@ -15,8 +14,7 @@ class About extends Component {
                     showButton={false}
                     image={image}
                 />
-                {/* // < !--About-- > */}
-                {/* <section className="page-section" id="about"> */}
+    
                 <section id="about">
                     <div className="container">
                         <div className="text-center">

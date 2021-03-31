@@ -13,7 +13,6 @@ const fields = [
 class Login extends Component {
     render() {
         return (
-            // <h1>Login</h1>
             <div className="login-page">
                 <div className="container">
                     <div className="login-form">
@@ -21,7 +20,6 @@ class Login extends Component {
                             <h1>Login</h1>
                         </div>
                         <div className="row">
-                            {/* <form onSubmit={this.props.handleSubmit}> */}
                             <form onSubmit={e => { 
                                 e.preventDefault();
                                 this.props.login(this.props.values.email,this.props.values.password);
@@ -64,7 +62,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         login: (email, pass) => {
-            // console.log("Loging in user", email);
             dispatch(AuthActions.login(email,pass));
         }
     }
@@ -74,7 +71,6 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(withFormik({
-// export default connect(withFormik({
     mapPropsToValues: () => ({
         email: '',
         password: ''
@@ -85,13 +81,6 @@ export default connect(
     }),
     handleSubmit: (values, { setSubmitting }, login) => {
         console.log("Login attempt", values);
-        // this.props.login(values.email,values.password);
-    //   login(values.email,values.password);
     }
-// }))(Login);
 })
-// (connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-// )
 (Login));
